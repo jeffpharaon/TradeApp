@@ -1,0 +1,41 @@
+﻿<Window x:Class="TradeApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вход" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <Image Source="file:///D:/VsCodeProjects/.Curs/Edelweiss/задание/задание/resources/Images/icons/logo.png" Height="50"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <Label Content="Логин:"/>
+            <TextBox Name="LoginTextBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,10">
+            <Label Content="Пароль:"/>
+            <PasswordBox Name="PasswordBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,10" Name="CaptchaPanel" Visibility="Collapsed">
+            <Label Content="Введите капчу:"/>
+            <StackPanel Orientation="Horizontal">
+                <Image Name="CaptchaImage" Width="100" Height="40" Margin="0,0,10,0"/>
+                <TextBox Name="CaptchaTextBox" Width="100"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Войти" Width="80" Click="LoginButton_Click" Margin="5"/>
+            <Button Content="Гость" Width="80" Click="GuestButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
